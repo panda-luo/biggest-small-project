@@ -28,7 +28,6 @@ public class BgServiceImpl implements BgService {
     BingImageDto bingImageDto = JSONUtil.toBean(resp, BingImageDto.class);
     BingImageDetailDto bingImageDetailDto = bingImageDto.getImages().get(0);
 
-    log.info(bingImageDto.toString());
     this.assemble(bingImageVo, bingImageDetailDto);
     return bingImageVo;
   }

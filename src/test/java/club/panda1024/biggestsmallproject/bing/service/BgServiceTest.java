@@ -24,7 +24,7 @@ public class BgServiceTest {
   @Test
   public void getImageByBingJsonTest() {
     BingImageVo imageByBingJson = bgService.getImageByBingJson();
-
+    System.out.println(imageByBingJson.getDisc());
 
   }
 
