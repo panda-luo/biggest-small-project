@@ -14,6 +14,6 @@ public class DummyController {
 
   @GetMapping("dummy")
   public String dummy() {
-    return "dummy-win-jenkins--try";
+    return "dummy-win-jenkins--try--try";
   }
 }
