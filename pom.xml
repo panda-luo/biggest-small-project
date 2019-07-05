@@ -43,6 +43,13 @@
         </dependency>
         <!-- hutool end -->
 
+        <!-- thymeleaf start -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+        <!-- thymeleaf end -->
+
         <!-- guava start -->
         <dependency>
             <groupId>com.google.guava</groupId>

@@ -37,7 +37,7 @@ public class BgServiceImpl implements BgService {
 
 
 
-//===============================================================================
+//=============================================================================================
 // 以下为私有方法
 
   private void assemble(BingImageVo bingImageVo, BingImageDetailDto bingImageDetailDto) {
