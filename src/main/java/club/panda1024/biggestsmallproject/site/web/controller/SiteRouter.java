@@ -31,6 +31,4 @@ public class SiteRouter {
     model.addAttribute("bg", bgService.getImageByBingJson());
 
   }
-
-
 }
