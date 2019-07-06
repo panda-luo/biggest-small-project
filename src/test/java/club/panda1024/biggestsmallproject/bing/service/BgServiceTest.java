@@ -38,12 +38,9 @@ public class BgServiceTest {
 
     Iterator iter = list.iterator();
 
-
     if(iter.hasNext()) {
 
     }
-
-
   }
 
 }
