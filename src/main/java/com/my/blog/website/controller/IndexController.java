@@ -56,7 +56,6 @@ public class IndexController extends BaseController {
     /**
      * 首页
      *
-     * @return
      */
     @GetMapping(value = "/")
     public String index(HttpServletRequest request, @RequestParam(value = "limit", defaultValue = "12") int limit) {

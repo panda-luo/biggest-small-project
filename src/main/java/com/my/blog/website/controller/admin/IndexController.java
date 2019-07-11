@@ -20,6 +20,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -51,7 +52,7 @@ public class IndexController extends BaseController {
      * @return
      */
     @GetMapping(value = {"","/index"})
-    public String index(HttpServletRequest request){
+    public String index(Model model){
         LOGGER.info("Enter admin index method");
         List<CommentVo> comments = siteService.recentComments(5);
         List<ContentVo> contents = siteService.recentContents(5);
@@ -59,10 +60,10 @@ public class IndexController extends BaseController {
         // 取最新的20条日志
         List<LogVo> logs = logService.getLogs(1, 5);
 
-        request.setAttribute("comments", comments);
-        request.setAttribute("articles", contents);
-        request.setAttribute("statistics", statistics);
-        request.setAttribute("logs", logs);
+        model.addAttribute("comments", comments);
+        model.addAttribute("articles", contents);
+        model.addAttribute("statistics", statistics);
+        model.addAttribute("logs", logs);
         LOGGER.info("Exit admin index method");
         return "admin/index";
     }
